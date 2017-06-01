@@ -10,7 +10,7 @@ var Post = require('./models/post');
 var app = express();
 var router = express.Router();
 
-var port = process.env.API_PORT || 3001;
+var port = process.env.PORT || 3001;
 
 if (app.get('env') === 'development') {
   console.log(app.get('env'));
