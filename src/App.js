@@ -5,6 +5,7 @@ import PostArea from './components/PostArea';
 class App extends Component {
   render() {
     if (process.env.NODE_ENV === 'development') {
+      console.log(process.env.NODE_ENV);
       return (
         <div>
           <Header title='React CRUD Blog' />
@@ -12,6 +13,7 @@ class App extends Component {
         </div>
       );
     } else if (process.env.NODE_ENV === 'production') {
+      console.log(process.env.NODE_ENV);
       return (
         <div>
           <Header title='React CRUD Blog' />
