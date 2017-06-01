@@ -9,7 +9,7 @@ body {
   color: $color-night;
 }
 
-.App-header {
+.app-header {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -17,4 +17,14 @@ body {
   background-color: $color-night;
   height: 150px;
   padding: 20px;
+}
+
+.post-wrapper {
+  width: 80vw;
+  margin: 0 auto;
+}
+
+.post-list {
+  max-height:  70vh;
+  overflow: scroll;
 }
