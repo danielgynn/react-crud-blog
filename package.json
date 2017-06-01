@@ -11,6 +11,7 @@
     "mongoose": "^4.10.4",
     "node-sass-chokidar": "^0.0.2",
     "nodemon": "^1.11.0",
+    "path": "^0.12.7",
     "react": "^15.5.4",
     "react-dom": "^15.5.4"
   },

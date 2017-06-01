@@ -3,6 +3,7 @@
 var express = require('express');
 var mongoose = require('mongoose');
 var bodyParser = require('body-parser');
+var path = require('path');
 
 var Post = require('./models/post');
 
@@ -28,6 +29,12 @@ app.use(function(req, res, next) {
   res.setHeader('Cache-Control', 'no-cache');
   next();
 });
+
+app.use(express.static(path.join(__dirname, 'build')));
+
+app.get('/', function (req, res) {
+  res.sendFile(path.join(__dirname, 'build', 'index.html'));
+})
 
 router.get('/', function(req, res) {
   res.json({ message: 'API is running!'});
