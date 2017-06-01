@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
+import Post from './Post';
 
 class PostList extends Component {
   render() {
     let postNodes = this.props.data.map(post => {
       return (
-        <div>
-          <h3>{post.author}</h3>
-          <span>{post.text}</span>
-        </div>
+        <Post author={ post.author } key={ post.id }>
+          { post.text}
+        </Post>
       )
     })
     return (

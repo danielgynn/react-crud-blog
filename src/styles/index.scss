@@ -4,6 +4,7 @@
 body {
   margin: 0;
   padding: 0;
+  font-size: 18px;
   font-family: $font-roboto;
   background-color: $color-haus;
   color: $color-night;
@@ -20,11 +21,19 @@ body {
 }
 
 .post-wrapper {
-  width: 80vw;
+  width: 70vw;
   margin: 0 auto;
 }
 
 .post-list {
   max-height:  70vh;
   overflow: scroll;
+}
+
+.post {
+  background-color: $color-night;
+  color: $color-haus;
+  margin: 1rem auto;
+  padding: 5px 10px;
+  font-size: .85rem;
 }
