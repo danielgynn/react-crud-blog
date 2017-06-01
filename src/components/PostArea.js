@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import PostList from './PostList';
+import PostForm from './PostForm';
 import DATA from '../test-data';
 
 class PostArea extends Component {
@@ -15,6 +16,7 @@ class PostArea extends Component {
       <div className="post-wrapper">
         <h2>Posts</h2>
         <PostList data={DATA} />
+        <PostForm />
       </div>
     );
   }
