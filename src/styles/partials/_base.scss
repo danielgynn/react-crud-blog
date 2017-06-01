@@ -16,3 +16,20 @@ body {
   height: 150px;
   padding: 20px;
 }
+
+button {
+  cursor: pointer;
+  background-color: $color-night;
+  border-radius: $border-radius;
+  color: $color-haus;
+  text-transform: uppercase;
+  letter-spacing: .4rem;
+  border: none;
+  padding: .25rem;
+  margin-right: .5rem;
+}
+
+.light-button {
+  background-color: $color-sur-dark;
+  color: $color-haus;
+}

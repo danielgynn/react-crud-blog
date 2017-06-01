@@ -60,8 +60,8 @@ class Post extends Component {
       <div className="post">
         <h3>{this.props.author}</h3>
         <span dangerouslySetInnerHTML={ this.rawMarkup() } />
-        <a href='#' onClick={ this.updatePost }>update</a>
-        <a href='#' onClick={ this.deletePost }>delete</a>
+        <button className='light-button' onClick={ this.updatePost }>update</button>
+        <button className='light-button' onClick={ this.deletePost }>delete</button>
 
         { (this.state.toBeUpdated)
           ? (<form className='post-form' onSubmit={ this.handlePostUpdate }>
@@ -77,10 +77,12 @@ class Post extends Component {
               placeholder='Update your post...'
               value={ this.state.text }
               onChange={ this.handleTextChange } />
-            <input
+            <button
               className='post-form-button'
               type='submit'
-              value='Update' />
+              value='Update'>
+              Update
+            </button>
           </form>) : null}
       </div>
     );

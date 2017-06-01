@@ -1,6 +1,5 @@
-
 .post-wrapper {
-  width: 70vw;
+  width: 80vw;
   margin: 0 auto;
 }
 
@@ -24,16 +23,17 @@
 }
 
 .post-form {
-  margin: 10px;
+  margin: 10px auto;
   display: flex;
   flex-flow: row wrap;
   justify-content: space-between;
 
   .post-form-input {
-    margin: 0 .5rem;
+    margin: .5rem;
     padding: 0 10px;
     border-radius: $border-radius;
     height: 40px;
+    display: block;
   }
 
   .post-form-author {
@@ -43,21 +43,16 @@
 
   .post-form-text {
     flex: 4;
-    min-width: 400px;
+    min-width: 200px;
+    max-width: 100%;
   }
 
   .post-form-button {
-    cursor: pointer;
-    min-width: 75px;
+    width: 75px;
+    max-width: 100%;
     flex: 1;
     height: 40px;
-    margin: 0 .5rem;
+    margin: .5rem;
     font-size: 1.25rem;
-    background-color: $color-night;
-    border-radius: $border-radius;
-    color: $color-haus;
-    text-transform: uppercase;
-    letter-spacing: .4rem;
-    border: none;
   }
 }

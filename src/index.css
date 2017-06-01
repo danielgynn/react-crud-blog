@@ -16,8 +16,23 @@ body {
   height: 150px;
   padding: 20px; }
 
+button {
+  cursor: pointer;
+  background-color: #333;
+  border-radius: 3px;
+  color: #f3f4f4;
+  text-transform: uppercase;
+  letter-spacing: .4rem;
+  border: none;
+  padding: .25rem;
+  margin-right: .5rem; }
+
+.light-button {
+  background-color: #24828f;
+  color: #f3f4f4; }
+
 .post-wrapper {
-  width: 70vw;
+  width: 80vw;
   margin: 0 auto; }
 
 .post-list {
@@ -36,31 +51,27 @@ body {
     color: #24828f; }
 
 .post-form {
-  margin: 10px;
+  margin: 10px auto;
   display: flex;
   flex-flow: row wrap;
   justify-content: space-between; }
   .post-form .post-form-input {
-    margin: 0 .5rem;
+    margin: .5rem;
     padding: 0 10px;
     border-radius: 3px;
-    height: 40px; }
+    height: 40px;
+    display: block; }
   .post-form .post-form-author {
     flex: 2;
     min-width: 150px; }
   .post-form .post-form-text {
     flex: 4;
-    min-width: 400px; }
+    min-width: 200px;
+    max-width: 100%; }
   .post-form .post-form-button {
-    cursor: pointer;
-    min-width: 75px;
+    width: 75px;
+    max-width: 100%;
     flex: 1;
     height: 40px;
-    margin: 0 .5rem;
-    font-size: 1.25rem;
-    background-color: #333;
-    border-radius: 3px;
-    color: #f3f4f4;
-    text-transform: uppercase;
-    letter-spacing: .4rem;
-    border: none; }
+    margin: .5rem;
+    font-size: 1.25rem; }
