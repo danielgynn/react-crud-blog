@@ -19,6 +19,7 @@
     "react-scripts": "1.0.7"
   },
   "scripts": {
+    "heroku-postbuild": "npm run build",
     "build-css": "node-sass-chokidar --include-path ./src/styles --include-path ./node_modules src/styles -o src/",
     "watch-css": "npm run build-css && node-sass-chokidar --include-path ./src/styles --include-path ./node_modules src/styles -o src/ --watch --recursive",
     "start": "react-scripts start",

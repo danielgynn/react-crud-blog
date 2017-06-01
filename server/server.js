@@ -13,6 +13,7 @@ var router = express.Router();
 var port = process.env.API_PORT || 3001;
 
 if (app.get('env') === 'development') {
+  console.log(app.get('env'));
   mongoose.connect('mongodb://danielgynn:secret@ds161041.mlab.com:61041/react-crud-blog');
 } else if (app.get('env') === 'production') {
   mongoose.connect('mongodb://danielgynn:password@ds161001.mlab.com:61001/heroku_33jn0r2v');
