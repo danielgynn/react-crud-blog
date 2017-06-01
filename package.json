@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "axios": "^0.16.1",
     "body-parser": "^1.17.2",
     "express": "^4.15.3",
     "foreman": "^2.0.0",

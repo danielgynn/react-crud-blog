@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
+import axios from 'axios';
 import PostList from './PostList';
 import PostForm from './PostForm';
-import DATA from '../test-data';
 
 class PostArea extends Component {
   constructor(props) {
@@ -9,13 +9,26 @@ class PostArea extends Component {
     this.state = {
       data: []
     };
+    this.loadPostsFromServer = this.loadPostsFromServer.bind(this);
+  }
+
+  loadPostsFromServer() {
+    axios.get(this.props.url)
+      .then(res => {
+        this.setState({ data: res.data });
+      })
+  }
+
+  componentDidMount() {
+    this.loadPostsFromServer();
+    setInterval(this.loadPostsFromServer, this.props.pollInterval);
   }
 
   render() {
     return (
       <div className="post-wrapper">
         <h2>Posts</h2>
-        <PostList data={DATA} />
+        <PostList data={ this.state.data } />
         <PostForm />
       </div>
     );

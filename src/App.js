@@ -6,8 +6,8 @@ class App extends Component {
   render() {
     return (
       <div>
-        <Header title="React CRUD Blog" />
-        <PostArea />
+        <Header title='React CRUD Blog' />
+        <PostArea url='http://localhost:3001/api/posts' pollInterval={2000} />
       </div>
     );
   }
