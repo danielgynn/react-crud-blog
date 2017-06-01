@@ -54,6 +54,36 @@ router.route('/posts')
     });
   });
 
+router.route('/posts/:post_id')
+  .put(function(req, res) {
+    Post.findById(req.params.post_id, function(err, post) {
+      if (err) {
+        res.send(err);
+      } else {
+        (req.body.author) ? post.author = req.body.author : null;
+        (req.body.text) ? post.text = req.body.text : null;
+
+        post.save(function(err) {
+          if (err) {
+            res.send(err);
+          } else {
+            res.json({ message: 'Post has been updated!' });
+          }
+        });
+      }
+    });
+  })
+
+  .delete(function(req, res) {
+    Post.remove({ _id: req.params.post_id }, function(err, post) {
+      if (err) {
+        res.send(err);
+      } else {
+        res.json({ message: 'Post has been deleted!' });
+      }
+    });
+  });
+
 app.use('/api', router);
 
 app.listen(port, function() {
