@@ -22,6 +22,15 @@ class PostForm extends Component {
 
   handleSubmit(e) {
     e.preventDefault();
+    let author = this.state.author.trim();
+    let text = this.state.text.trim();
+
+    if (!text || !author) {
+      return;
+    } else {
+      this.props.onPostSubmit({ author: author, text: text });
+      this.setState({ author: '', text: '' });
+    }
   }
 
   render() {

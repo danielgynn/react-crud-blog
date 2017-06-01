@@ -10,12 +10,26 @@ class PostArea extends Component {
       data: []
     };
     this.loadPostsFromServer = this.loadPostsFromServer.bind(this);
+    this.handlePostSubmit = this.handlePostSubmit.bind(this);
   }
 
   loadPostsFromServer() {
     axios.get(this.props.url)
       .then(res => {
         this.setState({ data: res.data });
+      })
+  }
+
+  handlePostSubmit(post) {
+    let posts = this.state.data;
+    post.id = Date.now();
+    let newPosts = posts.concat([post]);
+    this.setState({ data: newPosts });
+
+    axios.post(this.props.url, post)
+      .catch(err => {
+        console.error(err);
+        this.setState({ data: posts });
       })
   }
 
@@ -29,7 +43,7 @@ class PostArea extends Component {
       <div className="post-wrapper">
         <h2>Posts</h2>
         <PostList data={ this.state.data } />
-        <PostForm />
+        <PostForm onPostSubmit={ this.handlePostSubmit } />
       </div>
     );
   }
