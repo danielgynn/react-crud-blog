@@ -6,24 +6,11 @@ body {
   background-color: #f3f4f4;
   color: #333; }
 
-.App {
-  text-align: center; }
-
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px; }
-
 .App-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #f3f4f4;
   background-color: #333;
   height: 150px;
-  padding: 20px;
-  color: #f3f4f4; }
-
-.App-intro {
-  font-size: large; }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg); }
-  to {
-    transform: rotate(360deg); } }
+  padding: 20px; }

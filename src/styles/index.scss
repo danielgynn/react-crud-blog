@@ -9,27 +9,12 @@ body {
   color: $color-night;
 }
 
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
-}
-
 .App-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: $color-haus;
   background-color: $color-night;
   height: 150px;
   padding: 20px;
-  color: $color-haus;
-}
-
-.App-intro {
-  font-size: large;
-}
-
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
 }
