@@ -31,6 +31,9 @@ body {
   padding: 5px 10px;
   font-size: .85rem;
   border-radius: 3px; }
+  .post a {
+    margin-right: .5rem;
+    color: #24828f; }
 
 .post-form {
   margin: 10px;

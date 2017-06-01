@@ -16,6 +16,11 @@
   padding: 5px 10px;
   font-size: .85rem;
   border-radius: $border-radius;
+
+  a {
+    margin-right: .5rem;
+    color: $color-sur-dark;
+  }
 }
 
 .post-form {

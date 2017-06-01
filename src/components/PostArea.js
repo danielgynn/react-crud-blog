@@ -11,6 +11,8 @@ class PostArea extends Component {
     };
     this.loadPostsFromServer = this.loadPostsFromServer.bind(this);
     this.handlePostSubmit = this.handlePostSubmit.bind(this);
+    this.handlePostUpdate = this.handlePostUpdate.bind(this);
+    this.handlePostDelete = this.handlePostDelete.bind(this);
   }
 
   loadPostsFromServer() {
@@ -33,6 +35,23 @@ class PostArea extends Component {
       })
   }
 
+  handlePostUpdate(id, post) {
+    axios.put(`${this.props.url}/${id}`, post)
+      .catch(err => {
+        console.log(err);
+      })
+  }
+
+  handlePostDelete(id) {
+    axios.delete(`${this.props.url}/${id}`)
+      .then(res => {
+        console.log('Post deleted!');
+      })
+      .catch(err => {
+        console.log(err);
+      })
+  }
+
   componentDidMount() {
     this.loadPostsFromServer();
     setInterval(this.loadPostsFromServer, this.props.pollInterval);
@@ -42,7 +61,11 @@ class PostArea extends Component {
     return (
       <div className="post-wrapper">
         <h2>Posts</h2>
-        <PostList data={ this.state.data } />
+        <PostList
+          onPostUpdate={ this.handlePostUpdate }
+          onPostDelete={ this.handlePostDelete }
+          data={ this.state.data }
+        />
         <PostForm onPostSubmit={ this.handlePostSubmit } />
       </div>
     );
