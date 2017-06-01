@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "node-sass-chokidar": "^0.0.2",
     "react": "^15.5.4",
     "react-dom": "^15.5.4"
   },
@@ -10,6 +11,8 @@
     "react-scripts": "1.0.7"
   },
   "scripts": {
+    "build-css": "node-sass-chokidar --include-path ./src/styles --include-path ./node_modules src/styles -o src/",
+    "watch-css": "npm run build-css && node-sass-chokidar --include-path ./src/styles --include-path ./node_modules src/styles -o src/ --watch --recursive",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",

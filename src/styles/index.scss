@@ -1,3 +1,14 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,400i,500,700');
+@import "./partials/variables";
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: $font-roboto;
+  background-color: $color-haus;
+  color: $color-night;
+}
+
 .App {
   text-align: center;
 }
@@ -8,10 +19,10 @@
 }
 
 .App-header {
-  background-color: #222;
+  background-color: $color-night;
   height: 150px;
   padding: 20px;
-  color: white;
+  color: $color-haus;
 }
 
 .App-intro {
