@@ -4,10 +4,14 @@ var express = require('express');
 var mongoose = require('mongoose');
 var bodyParser = require('body-parser');
 
+var Post = require('./models/post');
+
 var app = express();
 var router = express.Router();
 
 var port = process.env.API_PORT || 3001;
+
+mongoose.connect('mongodb://danielgynn:secret@ds161041.mlab.com:61041/react-crud-blog');
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
