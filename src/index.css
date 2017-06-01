@@ -29,7 +29,8 @@ body {
   color: #f3f4f4;
   margin: 1rem auto;
   padding: 5px 10px;
-  font-size: .85rem; }
+  font-size: .85rem;
+  border-radius: 3px; }
 
 .post-form {
   margin: 10px;

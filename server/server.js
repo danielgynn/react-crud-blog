@@ -29,6 +29,31 @@ router.get('/', function(req, res) {
   res.json({ message: 'API is running!'});
 });
 
+router.route('/posts')
+  .get(function(req, res) {
+    Post.find(function(err, posts) {
+      if (err) {
+        res.send(err);
+      } else {
+        res.json(posts);
+      }
+    });
+  })
+
+  .post(function(req, res) {
+    var post = new Post();
+    post.author = req.body.author;
+    post.text = req.body.text;
+
+    post.save(function(err) {
+      if (err) {
+        res.send(err);
+      } else {
+        res.json({ message: 'Post successfully posted!'});
+      }
+    });
+  });
+
 app.use('/api', router);
 
 app.listen(port, function() {
