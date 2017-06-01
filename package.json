@@ -3,7 +3,10 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "body-parser": "^1.17.2",
+    "express": "^4.15.3",
     "marked": "^0.3.6",
+    "mongoose": "^4.10.4",
     "node-sass-chokidar": "^0.0.2",
     "react": "^15.5.4",
     "react-dom": "^15.5.4"
