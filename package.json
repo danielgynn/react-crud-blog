@@ -12,8 +12,10 @@
     "node-sass-chokidar": "^0.0.2",
     "nodemon": "^1.11.0",
     "path": "^0.12.7",
+    "prop-types": "^15.5.10",
     "react": "^15.5.4",
-    "react-dom": "^15.5.4"
+    "react-dom": "^15.5.4",
+    "redux": "^3.6.0"
   },
   "devDependencies": {
     "react-scripts": "1.0.7"
