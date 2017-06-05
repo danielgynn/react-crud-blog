@@ -1,6 +1,7 @@
-import React, { PropTypes } from 'react';
+import React from 'react';
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 import { Provider } from 'react-redux';
+import PropTypes from 'prop-types';
 import Home from './pages/Home';
 import Posts from './pages/Posts';
 
