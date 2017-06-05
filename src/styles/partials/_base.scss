@@ -33,3 +33,12 @@ button {
   background-color: $color-sur-dark;
   color: $color-haus;
 }
+
+.navigation {
+  display: flex;
+
+  li {
+    margin: 0 .5rem;
+    list-style: none;
+  }
+}

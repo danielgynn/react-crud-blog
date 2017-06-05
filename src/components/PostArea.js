@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import PostList from './PostList';
 import PostForm from './PostForm';
+import LikeCounter from './LikeCounter';
 
 class PostArea extends Component {
   constructor(props) {
@@ -66,6 +67,11 @@ class PostArea extends Component {
           onPostDelete={ this.handlePostDelete }
           data={ this.state.data }
         />
+        <LikeCounter
+          value={this.props.value}
+          onIncrement={this.props.onIncrement}
+          onDecrement={this.props.onDecrement}
+        />  
         <PostForm onPostSubmit={ this.handlePostSubmit } />
       </div>
     );

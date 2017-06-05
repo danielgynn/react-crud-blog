@@ -31,6 +31,12 @@ button {
   background-color: #24828f;
   color: #f3f4f4; }
 
+.navigation {
+  display: flex; }
+  .navigation li {
+    margin: 0 .5rem;
+    list-style: none; }
+
 .post-wrapper {
   width: 80vw;
   margin: 0 auto; }
